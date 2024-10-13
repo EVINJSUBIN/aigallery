@@ -1,25 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap');
 * {
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+  font-family: "Londrina Sketch", sans-serif;
+  font-weight: 900;
+  font-style: normal;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  background-color: black;
 }
 
 header {
+  border-radius: 20px;
+  width: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  background-color: #007acc;
-  color: white;
+  padding: 50px;
+  background-color: white;
+  color: black;
+  margin-top: 100px;
 }
 
 header h1 {
   margin: 0;
+  color: black;
 }
 
 header input, header select {
@@ -37,17 +45,17 @@ main {
 }
 
 .card {
-  background-color: white;
-  border: 1px solid #ddd;
+  background-color: rgba(67, 61, 61, 0.844);
+  border: 1px solid gray;
   border-radius: 8px;
   width: 300px;
   margin: 10px;
   padding: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
 }
 
 .card:hover {
+  box-shadow: 0px -10px 80px rgba(252, 251, 251, 0.71);
   transform: scale(1.05);
 }
 
@@ -58,19 +66,31 @@ main {
 
 .card p {
   font-size: 0.9em;
-  color: #555;
+  color: white;
 }
 
 .card a {
   display: inline-block;
   margin-top: 10px;
   padding: 8px 12px;
-  background-color: #007acc;
+  background-color: transparent;
+  border: 2px solid black;
   color: white;
   text-decoration: none;
   border-radius: 4px;
+  width: 20%;
+  transition: width 1s;
 }
 
 .card a:hover {
-  background-color: #005ea0;
+  width: 100%;
+  text-align: center;
+ 
+  box-shadow: 0px -10px 80px rgba(252, 251, 251, 0.71);
+  transform: scale(1.05);
 }
+
+@media only screen and (max-width: 1128px) {
+  header {
+    width: 80%;
+  }
